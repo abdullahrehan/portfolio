@@ -1,0 +1,15 @@
+bg-rose-200
+h-1/2 50%
+h-1/4 25%
+h-full 100%
+h-screen 100vh
+
+border 1px
+border-2 2px
+border-black
+rounded-full
+
+justify-center
+justify-items-center
+
+items-center

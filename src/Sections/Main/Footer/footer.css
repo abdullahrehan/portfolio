@@ -1,0 +1,14 @@
+.box{
+    animation-name: box;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count:infinite;
+}
+
+
+  @keyframes box {
+    0% {transform: rotate3d(0deg)}
+    50% {transform: rotate3d(270deg);}
+    100% {transform: rotate3d(360deg);}
+}

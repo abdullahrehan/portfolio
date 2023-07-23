@@ -1,0 +1,53 @@
+.signature{
+    stroke-dasharray: 24000;
+    stroke-dashoffset:2400 ;
+}
+.coffee_Filled_div{
+    height: 45px;
+    /* margin-bottom: 0px; */
+    animation-name: coffee;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count:infinite;
+}
+
+
+  @keyframes coffee {
+    0% {height: 10px;}
+    50% {height: 45px;}
+    100% {height: 0px;}
+}
+
+/* .profile_pic{
+  animation-name: profile_pic;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 20s;
+  animation-iteration-count:infinite;
+  height: 380px;
+}
+
+
+@keyframes profile_pic {
+  0% {height: 380px;}
+  50% {height: 370px;}
+  100% {height: 380px;}
+} */
+
+.arrow_head{
+    animation-name: arrow;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count:infinite;
+}
+
+
+  @keyframes arrow {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(10deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}

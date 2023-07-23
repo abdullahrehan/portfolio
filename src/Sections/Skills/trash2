@@ -1,0 +1,207 @@
+import React, { useState , useRef } from 'react'
+import SkillsImage from '../Images/SkillsImage.png'
+import SkillsApi from '../SkillsApi'
+import Plan from '../Images/plan.png'
+import SkillsQutationStart from '../Images/skillsQutationStart.png'
+import SkillsQutationEnd from '../Images/skillsQutationEnd.png'
+import arrowDown from '../Images/arrowDown.png'
+import { Link } from 'react-scroll'
+
+function Skills() {
+
+    const [enableReadMore, setEnableReadMore] = useState(false)
+    const [selectedSkill,setSelectedSkill] = useState("ReactJs")
+    const skillsRefs = useRef([]);
+
+    const conditions = (Data, classesForReadModeOn = [], classesForReadModeOff = [], classesForReadModeSelectedIndex = []) => {
+
+        if (enableReadMore) {
+
+            if (Data.name !== selectedSkill) { return (`${classesForReadModeOn.map(classes => `${classes}`).join(' ')} ease-linear duration-500 `) }
+
+            else { return (`${classesForReadModeSelectedIndex.map(classes => `${classes}`).join(' ')} ease-linear duration-500  `) }
+        }
+
+        else { return (`${classesForReadModeOff.map(classes => `${classes}`).join(' ')} ease-linear duration-500    `) }
+
+    }
+
+    const readMoreFunc=(data,index)=>{
+
+       
+
+        // console.log(index);
+        setEnableReadMore(!enableReadMore);
+        setSelectedSkill(data.name)
+        // if(enableReadMore)skillsRefs.current[index].style.width="1200px"
+        
+        // // console.log(SkillsApi());
+
+        // SkillsApi().map(d=>{
+        //     if(d.name!==selectedSkill){ skillsRefs.current[index].style.display="none"}
+        // })
+        
+        // console.log(skillsRefs.current[index]);
+        setTimeout(() => {
+            for (let i = 0; i < 5; i++) {
+                if(i!==index)
+                skillsRefs.current[i].style.display="none"
+                
+            }    
+        }, 300);
+        
+    }
+
+    return (
+
+        <div className='w-[95%] h-full bg-red-000'>
+
+            {/*  ---- Hidden Heading ------- */}
+
+            <div className="h-[7%] w-full bg-orange-000 md:hidden flex md:items-center items-end font-bold">Skills</div>
+
+            {/*  ---- Main Body ------- */}
+
+            <div className='h-[93%] md:h-[100%] w-full bg-red-000 flex md:flex-row flex-col-reverse'>
+
+                {/*  ---- Skills Cards Section ------- */}
+
+                <div className="h-4/6 md:h-full md:w-[68%] w-full bg-orange-000 flex flex-col">
+
+                    {/*  ---- Skills Heading ------- */}
+
+                    <div className="h-[13%] w-full bg-orange-000 md:flex hidden items-end text-xl font-bold">Skills :</div>
+
+                    {/*  ---- Skills Cards ------- */}
+
+                    <div className={`h-[100%] md:h-[85%] w-full bg-orange-000 flex items-center pl-0 overflow-x-auto gap-12 hide-scrollbar`}>
+
+                        {SkillsApi().map((data,index) =>
+
+                            <div ref={element => skillsRefs.current[index] = element} className={`h-[90%] rounded bg-[#F5F5F5]  ${data.name} ${conditions(data , ["min-w-[0px]", "h-[50px]","ease-linear","duration-900"] , [ "min-w-[180px]" , "flex"  , "justify-center" , "flex-col"] , ["min-w-[180px]","flex"])}`}>
+
+                                <div className={`w-full  bg-yellow-000 flex flex-row ${conditions(data,["h-[40%]"],[null],["h-[40%]"])}`}>
+
+                                    <div className={`w-[40%] h-full bg-orange-000 text-[78px] pt-2 ${conditions(data,["hidden"],["center"],[null])}`}>
+                           
+                                        <img src={data.numberPic} className='h-5/6' />
+                           
+                                    </div>
+
+                                    <div className={`h-full bg-orange-000 flex flex-col ${conditions(data,["w-[100%]"],[null],["w-[60%]"])}`}>
+                           
+                                        <div className={`w-full h-4/6 bg-orange-000 ${conditions(data,["hidden"],["center"],[null])}`}>
+                           
+                                            <img src={data.percentagePic} className='h-5/6' />
+                           
+                                        </div>
+                           
+                                        <div className={`w-full bg-orange-000 center ${conditions(data,["h-full"],[null],["h-2/6"])} ${data.name == "Mern" || "Photoshop" ? "flex-col" : "flex-row"} `}>
+                           
+                                            <img src={data.skillIcon} className={`${data.name == "Mern" || (!enableReadMore && data.name ==  "Photoshop") ? "md:h-[25px] h-[18px]" : conditions(data,["hidden"],["center"],[null])}}`
+                                            }/>
+                           
+                                            <span className={`${conditions(data, ['hidden'], ['center'], ['center'])}`}>
+                           
+                                                {data.name}
+
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div className={`w-full h-[60%] bg-yellow-000 center flex-col`}>
+                                    
+                                    <div className={`w-[90%] h-[91%] bg-[#E8E8E8] rounded  text-center text-[13px] center }`}>
+                                        <span className={conditions(data,[" hidden "],[" center "],[null])}>
+                                        Lorem Ipsum is
+                                        simply dummy text
+                                        of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy
+                                        text ever since the 1500s,
+                                        </span>
+                                    </div>
+
+                                    <button onClick={()=>readMoreFunc(data,index)} className={conditions(data,[" hidden "],[" center "],[null])}>Read More</button>
+                                    {/* <button onClick={()=>readMoreFunc(data,index)} className={conditions(data,[" hidden "],[" center "],[null])}>Close</button> */}
+                                
+                                </div>
+                        
+                            </div>
+                        )}
+
+                    </div>
+
+                    {/*  ---- Bottom  ------- */}
+                    {/* 
+                    <div className='w-[50px] h-full bg-red-000 hidden md:flex md:justify-center md:items-center'>
+                            <div className='w-[42px] h-[42px] bg-[#D9D9D9] rounded-[100%] center'>
+                                <img src={arrowDown} className='-rotate-90'/>
+                            </div>
+                        </div> */}
+
+                    {/*  ---- Button Scroll ------- */}
+
+                    <div className={'w-[89%] h-[20px] bg-green-000 md:justify-center md:items-center ' + (enableReadMore ? 'hidden' : 'md:flex')}>
+                        <div className='w-[220px] h-[7px] rounded bg-[#D9D9D9] flex items-center'>
+                            <div className='w-[120px] h-[7px] rounded bg-[#A3AEAB] pl-2'></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className='h-full w-[5%] bg-green-000 center'>
+            
+                    <Link to="Photoshop" className={'w-[35px] h-[35px] bg-[#D9D9D9] rounded-full center hover:bg-[#A3AEAB] hover:cursor-pointer'}>
+            
+                        <img src={arrowDown} className='-rotate-90 pt-1' />
+            
+                    </Link>
+            
+                </div>
+
+                {/*  ---- Skills Pic Section ------- */}
+
+                <div className="h-2/6 md:h-full md:w-[27%] w-full bg-orange-000 flex md:flex-col flex-row">
+
+                    {/*  ---- Skills Quotation ------- */}
+
+                    <div className="w-[45%] md:h-[15%] h-full md:w-full bg-orange-000 flex justify-center pb-0 items-end font-bold text-[#C57054] md:items-end items-center">
+
+                        <span>
+                            <img src={Plan} className='hidden md:block h-[40px]' />
+                        </span>
+
+                        <spam className='bg-red-000 h-full flex md:items-end  md:pb-2 pb-12 pr-1 md:flex hidden'>
+                            <img src={SkillsQutationStart} />
+                        </spam>
+
+                        <spam className="md:block hidden"> Skills are better than strength </spam>
+
+                        <spam className="md:hidden block"> "Skills are better than strength" </spam>
+
+
+                        <spam className='bg-red-000 h-full flex items-end pb-2 pl-1 md:flex hidden'>
+                            <img src={SkillsQutationEnd} />
+                        </spam>
+
+                    </div>
+
+                    {/*  ---- Skills Vector Image ------- */}
+
+                    <div className="w-[55%] md:h-[85%] h-full md:w-full bg-orange-000 p-2 center">
+                        <img src={SkillsImage} className='pb-4 md:h-[270px] h-[175px]' />
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    )
+}
+
+export default Skills
