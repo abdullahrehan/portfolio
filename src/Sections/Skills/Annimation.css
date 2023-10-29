@@ -1,0 +1,40 @@
+.icons_annimation {
+     
+    animation-name: icons_annimation;
+    animation-duration: 3s;
+    transform: rotate(0deg);
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes icons_annimation {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+  }
+
+  
+  .skill_icon_annimation{
+
+   animation-name: skill_icon_annimation;
+    animation-duration: 1s; 
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes skill_icon_annimation {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+  }

@@ -17,20 +17,31 @@ import MernSmallIcon from './Images/mern-small-icon.png'
 import FigmaIcon from './Images/figma-icon.png'
 import PhotoshopIcon from './Images/PhotoshopIcon.png'
 
-function SkillsApi() {
 
-    const [skills, setSkills] = React.useState([
-        {
+const SkillsApi=[
+
+    {
             name: "ReactJs",
             numberPic: NumberOne,
             percentagePic: ReactPercentage,
             skillIcon: ReactIcon,
             text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum" ,
             projects:[
-                {name:"Project 1",  video:"https://www.youtube.com/embed/tgbNymZ7vqY" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
-                {name:"Project 2",  video:"https://www.youtube.com/embed/6mbwJ2xhgzM" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
+                {
+                    name:"Project 1",
+                    video:"https://www.youtube.com/embed/tgbNymZ7vqY" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
+                {
+                    name:"Project 2",
+                    video:"https://www.youtube.com/embed/6mbwJ2xhgzM" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
             ]
         },
+    
         {
             name: "JavaScript",
             numberPic: NumberTwo,
@@ -38,10 +49,21 @@ function SkillsApi() {
             skillIcon: JsIcon,
             text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
             projects:[
-                {name:"Project 1",  video:"https://www.youtube.com/embed/tgbNymZ7vqY" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
-                {name:"Project 2",  video:"https://www.youtube.com/embed/6mbwJ2xhgzM" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
+                {
+                    name:"Project 1",
+                    video:"https://www.youtube.com/embed/tgbNymZ7vqY" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
+                {
+                    name:"Project 2",
+                    video:"https://www.youtube.com/embed/6mbwJ2xhgzM" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
             ]
         },
+        
         {
             name: "Mern",
             numberPic: NumberThree,
@@ -50,10 +72,21 @@ function SkillsApi() {
             skillSmallIcon: MernSmallIcon,
             text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
             projects:[
-                {name:"Project 1",  video:"https://www.youtube.com/embed/tgbNymZ7vqY" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
-                {name:"Project 2",  video:"https://www.youtube.com/embed/6mbwJ2xhgzM" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
+                {
+                    name:"Project 1",
+                    video:"https://www.youtube.com/embed/tgbNymZ7vqY" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
+                {
+                    name:"Project 2",
+                    video:"https://www.youtube.com/embed/6mbwJ2xhgzM" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
             ]
         },
+       
         {
             name: "React Native",
             numberPic: NumberFour,
@@ -61,10 +94,21 @@ function SkillsApi() {
             skillIcon: ReactNativeIcon,
             text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
             projects:[
-                {name:"Project 1",  video:"https://www.youtube.com/embed/tgbNymZ7vqY" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
-                {name:"Project 2",  video:"https://www.youtube.com/embed/6mbwJ2xhgzM" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
+                {
+                    name:"Project 1",
+                    video:"https://www.youtube.com/embed/tgbNymZ7vqY" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
+                {
+                    name:"Project 2",
+                    video:"https://www.youtube.com/embed/6mbwJ2xhgzM" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
             ]
         },
+       
         {
             name: "Figma",
             numberPic: NumberFive,
@@ -72,10 +116,21 @@ function SkillsApi() {
             skillIcon: FigmaIcon,
             text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
             projects:[
-                {name:"Project 1",  video:"https://www.youtube.com/embed/tgbNymZ7vqY" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
-                {name:"Project 2",  video:"https://www.youtube.com/embed/6mbwJ2xhgzM" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
+                {
+                    name:"Project 1",
+                    video:"https://www.youtube.com/embed/tgbNymZ7vqY" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
+                {
+                    name:"Project 2",
+                    video:"https://www.youtube.com/embed/6mbwJ2xhgzM" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
             ]
         },
+       
         {
             name: "Photoshop",
             numberPic: NumberSix,
@@ -83,14 +138,22 @@ function SkillsApi() {
             skillIcon: PhotoshopIcon,
             text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
             projects:[
-                {name:"Project 1",  video:"https://www.youtube.com/embed/tgbNymZ7vqY" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
-                {name:"Project 2",  video:"https://www.youtube.com/embed/6mbwJ2xhgzM" , description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." },
+                {
+                    name:"Project 1",
+                    video:"https://www.youtube.com/embed/tgbNymZ7vqY" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
+                {
+                    name:"Project 2",
+                    video:"https://www.youtube.com/embed/6mbwJ2xhgzM" ,
+                    description:" Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." 
+                },
+
             ]
         },
-    ])
+    ]
 
-    return skills
 
-}
 
 export default SkillsApi

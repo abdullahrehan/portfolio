@@ -1,168 +1,220 @@
-import React from 'react'
-import GithubIcon from '../Images/GithubIcon.png'
-import LinkedinIcon from '../Images/LinkedinIcon.png'
-import RemotebaseIcon from '../Images/RemotebaseIcon.png'
-import FiverrIcon from '../Images/FiverrIcon.png'
-import CenterLogo from '../Images/Center Logo.png'
-import { MdPermContactCalendar } from 'react-icons/md';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
-import { MdEmail } from 'react-icons/md';
+import React, { useState } from 'react'
+import facebook_Icon from '../Images/facebook_Icon.png'
+import insta_Icon from '../Images/insta_Icon.png'
+import twitter_Icon from '../Images/twitter_Icon.png'
+import Contact from '../ContactUs/Contact'
 
 function Footer() {
+
+
+    const [openContact, setopenContact] = useState(false)
+
+    const OpenContact = () => {
+
+        setopenContact(!openContact)
+
+    }
+
     return (
-        <div className='w-[95%] h-full bg-[#343333] flex flex-row text-white rounded'>
 
-            {/*  ---- Coloumn 1 ------- */}
-            
-            <div className='w-1/3 h-full bg-red-000'>
+        <div className='w-[95%] max-w-[1300px] h-full bg-[#343333] flex center rounded shadow-lg'>
 
-                {/*  ---- Row 1 ------- */}
-                
-                <div className='w-full h-[30%] bg-pink-000'>
-               
-                    <div className='w-full h-[40%] bg-red-000 flex flex-row'>
+            <div className='w-full  h-full flex flex-col text-white'>
+                {/*  ---- Upper Portion ------- */}
 
-                        <div className='w-[13%] h-full bg-pink-000 border-r-[1px] border-b-[1px] border-white'></div>
+                <div className='w-full h-[75%] md:h-[60%]  bg-red-000 flex flex-col md:flex-row'>
 
-                        <div className='w-[87%] h-full bg-pink-000 border-b-[1px] border-white flex flex-row items-center pl-2 text-xl'>
-                            Approch me on :
+                    {/*  ---- Left Side ( Quotation & Contact us Button ) ------- */}
+
+                    <div className='w-full h-[30%] md:w-[40%] md:h-full bg-red-000 pl-0 '>
+
+                        {/* <div className='w-full h-full bg-green-000 center '> */}
+
+                            <div className='w-full h-full bg-red-000 flex sm:flex-row md:flex-col lg:flex-col'>
+
+                                {/*  ----  Quotation  ------- */}
+
+                                <div className='w-[50%] md:w-full md:h-[50%] lg:w-full md:pl-10 lg:pl-10  w-[80%] h-full bg-green-000 flex items-end text-3xl pl-2 md:text-[clamp(0rem,calc(350vw/100),2.2rem)] font-medium'>
+
+                                    <span>Your  <span className='text-[#C57054]'>vision</span>, <br /> Our web <span className='text-[#C57054]'>expertise</span></span>
+
+                                </div>
+
+                                {/*  ----  Contact Us Button  ------- */}
+
+                                <div className='w-[50%]  md:h-[50%] flex items-center justify-end md:justify-start pr-2 md:w-full md:pl-10 w-[20%] h-full bg-green-00  '>
+
+                                    <button className='w-[150px] h-[54px] border-[1px] border-[#C57054] text-[#C57054]' onClick={() => setopenContact(true)}>Contact Us</button>
+
+                                </div>
+
+                            {/* </div> */}
+
                         </div>
 
                     </div>
-               
-                    {/*  ---- Icons Section ------- */}
-                    
-                    <div className='w-full h-[60%] bg-red-000 flex flex-row'>
-               
-                        <div className='w-[13%] h-full bg-pink-000 border-r-[1px] border-white'></div>
-               
-                        <div className='w-[87%] h-full bg-pink-000 flex flex-row gap-0 '>
 
-                            <div className='w-[12%] h-full bg-green-000 border-0 border-white center'>
-                                <img src={GithubIcon} className='h-[35px]' />
-                            </div>
+                    {/*  ---- Right Side ( Services , Links , Credits ) ------- */}
 
-                            <div className='w-[12%] h-full bg-green-000 border-0 border-white center'>
-                                <img src={LinkedinIcon} className='h-[35px]' />
-                            </div>
+                    <div className='w-full h-[70%] md:w-[60%] md:h-full bg-red-000 flex-row center md:flex md:justify-end text-[16px] md:gap-[25px] gap-[20px] sm:gap-[50px]'>
 
-                            <div className='w-[50%] h-full bg-green-000 border-0 border-white center'>
-                                <img src={RemotebaseIcon} className='h-[35px]' />
-                            </div>
+                        {/*  ----  Services  ------- */}
 
-                            <div className='w-[12%] h-full bg-green-000 border-0 border-white center'>
-                                <img src={FiverrIcon} className='h-[35px]' />
-                            </div>
+                        <div className='w-[20%] max-w-[150px] min-w-[140px] md:min-w-[120px] h-full bg-red-000 flex justify-center flex-col text-[1rem] md:text-sm '>
+
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center md:text-[1.5rem] text-[1.6rem] text-[#9A9A9A]'>
+
+                                    Services
+
+                                </div>
+
+                                <div className='h-[12px] bg-red-000 flex justify-start items-center'></div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Web Designing
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Web Development
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    SEO Optimization
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Web Hosting
+
+                                </div>
+
 
                         </div>
-               
+
+                        {/*  ----  Links  ------- */}
+
+                        <div className='w-[20%] max-w-[150px] min-w-[140px] md:min-w-[125px] h-full bg-red-000 flex justify-center flex-col text-base'>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center md:text-[1.5rem] text-[1.6rem] text-[#9A9A9A]'>
+
+                                    Quick Links
+
+                                </div>
+
+                                <div className='h-[12px] bg-red-000 flex justify-start items-center'></div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Home
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Services
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Education
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Skills
+
+                                </div>
+
+                        </div>
+
+                        {/*  ----  Credits  ------- */}
+
+                        <div className='w-[15%] max-w-[150px] min-w-[120px] h-full bg-red-000 flex justify-center flex-col text-base'>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center md:text-[1.5rem] text-[1.6rem] text-[#9A9A9A]'>
+
+                                    Credits
+
+                                </div>
+
+                                <div className='h-[12px] bg-red-000 flex justify-start items-center'></div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Vectory
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Storyset
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Freepick
+
+                                </div>
+
+                                <div className='h-[30px] bg-red-000 flex justify-start items-center'>
+
+                                    Storyset
+
+                                </div>
+
+                        </div>
+
                     </div>
-               
-                </div>
-               
-                {/*  ---- Row 2 ------- */}
-                
-                <div className='w-full h-[50%] bg-pink-000 center'>
-               
-                    <div className='w-[90%] h-[62%] bg-[#828181] rounded'>
-               
-                        <div className='w-full h-1/3 bg-pink-000 flex flex-row'>
-                            <div className='w-[10%] h-full bg-yellow-000 center'><MdPermContactCalendar size={22} /></div>
-                            <div className='w-[90%] h-full bg-yellow-000 flex items-center'> <span className='font-bold pr-2'>Contact no : </span> 03104722753 </div>
-                        </div>
-               
-                        <div className='w-full h-1/3 bg-pink-000 flex flex-row'>
-                            <div className='w-[10%] h-full bg-yellow-000 center'><HiOutlineLocationMarker size={22} /></div>
-                            <div className='w-[90%] h-full bg-yellow-000 flex items-center'> <span className='font-bold pr-2'>Location : </span> Lahore </div>
 
-                        </div>
-               
-                        <div className='w-full h-1/3 bg-pink-000 flex flex-row'>
-                            <div className='w-[10%] h-full bg-yellow-000 center'><MdEmail size={22} /></div>
-                            <div className='w-[90%] h-full bg-yellow-000 flex items-center'> <span className='font-bold pr-2'>Email : </span>  abdullahrehan8118@gmail.com </div>
-                        </div>
-               
-                    </div>
-               
                 </div>
-               
-               {/*  ---- Row 3 ------- */}
 
-                <div className='w-full h-[20%] bg-pink-000 center'>
-               
-                    <div className='w-[95%] h-[80%] bg-pink-000 flex flex-row'>
-               
-                        <div className='w-[25%] h-full bg-blue-000 flex justify-center items-center border-r-2 border-white'>credits:</div>
-               
-                        <div className='w-[75%] h-full bg-blue-000 flex flex-col'>
-                            <div className='w-full h-1/2 bg-blue-000 flex items-center pl-2'>Self Learning Vectors by Vecteezy</div>
-                            <div className='w-full h-1/2 bg-blue-000 flex items-center pl-2'>Image by storyset</div>
-                        </div>
+                {/*  ---- Lower Portion (Copyright & Icons) ------- */}
+
+                <div className='w-full h-[25%] md:h-[40%] bg-red-000 flex flex-col'>
+
+                    {/*  ----  Icons  ------- */}
+
+                    <div className='w-full h-[55%] flex flex-row bg-red-00 flex items-end justify-center pb-2'>
+
+                            <img src={facebook_Icon} className='w-[40px] h-[38px]' />
+
+                            <img src={twitter_Icon} className='w-[40px] h-[38px]' />
+
+                            <img src={insta_Icon} className='w-[40px] h-[38px]' />
 
                     </div>
-               
-                </div>
-            
-            </div>
 
-            {/*  ---- Coloumn 2 ------- */}
-            
-            <div className='w-1/3 h-full bg-red-000 flex flex-col'>
-            
-                <div className='w-full h-[80%] bg-orange-000 center'>
-                    <img src={CenterLogo} />
-                </div>
-            
-                <div className='w-full h-[20%] bg-orange-000 center'>
-                    <div className='w-[90%] h-[80%] bg-orange-000 center'>
+                    {/*  ----  Line  ------- */}
+
+                    <div className='w-full h-[4%] bg-red-000 center'>
+
+                        <div className='w-[90%] h-[1px] bg-[#6B6B6B]'></div>
+
+                    </div>
+
+                    {/*  ----  Copyright   ------- */}
+
+                    <div className='w-full h-[41%] bg-red-000 center text-sm text-[#848080]'>
+
                         Copyright 2023 Muhammad Abdullah Rehan
+
                     </div>
+
                 </div>
-            
+
+                {openContact ? <Contact OpenContact={OpenContact} /> : null}
+
             </div>
-
-            {/*  ---- Coloumn 3 ------- */}
-            
-            <div className='w-1/3 h-full flex flex-col center rounded'>
-
-                {/*  ---- Email Section ------- */}
-                
-                <div className='w-[100%] h-[80%]  center'>
-            
-                    <div className='w-[93%] h-[93%] bg-[#515151] flex flex-col gap-5 pt-1 pb-1 center rounded'>
-            
-                        {/*  ---- Email ------- */}
-                        
-                        <div className='w-[92%] h-[15%] rounded bg-[#636363] pl-3'>
-                            <input placeholder='Email' className='w-full h-full bg-[#0000] placeholder-white placeholder-opacity-50 focus:outline-none' />
-                        </div>
-            
-                        {/*  ---- Name ------- */}
-                        
-                        <div className='w-[92%] h-[15%] rounded bg-[#636363] pl-3'>
-                            <input placeholder='Subject' className='w-full h-full bg-[#0000] placeholder-white placeholder-opacity-50 focus:outline-none' />
-                        </div>
-            
-                        {/*  ---- Body ------- */}
-                        
-                        <div className='w-[92%] h-[50%] rounded bg-[#636363] pl-3 pt-1'>
-                            <textarea placeholder='Message' className='w-full h-full bg-[#0000] placeholder-white placeholder-opacity-50 focus:outline-none' />
-
-                        </div>
-            
-                    </div>
-            
-                </div>
-
-
-                {/*  ---- Send Button ------- */}
-                
-                <div className='w-full h-[20%] bg-[#343333] center'>
-                    <button className='w-[100px] h-[45px] rounded bg-[#F16E6E] '>Send Email</button>
-                </div>
-            
-            </div>
-        
         </div>
     )
 }
